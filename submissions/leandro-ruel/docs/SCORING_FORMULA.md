@@ -27,13 +27,21 @@ Calculated as average of:
 
 **Formula:**
 ```
-Account Score = (normalized_employee_count + normalized_revenue) / 2
+Account Score = employee_score (0-10) + revenue_score (0-10)
 ```
 
-**Examples:**
-- Startup (< 100 employees): 1-3 points
-- Small business (100-500 employees): 5-8 points
-- Enterprise (10,000+ employees): 18-20 points
+where `revenue` is stored in millions of dollars ($M):
+
+```
+employee_score = min(10, (employees / 10000) × 10)   // 10,000+ employees = full points
+revenue_score  = min(10, (revenue / 2000) × 10)      // $2B+ revenue = full points
+```
+
+**Examples (real dataset values):**
+- Startup (9 employees, $4.5M revenue): ~0 points
+- Mid-size (495 employees, $251M revenue): ~1 point
+- Large (2,822 employees, $1.1B revenue): ~8.3 points
+- Enterprise (34,288 employees, $11.7B revenue): 20 points
 
 **Why it matters:** Larger, more established companies are more likely to:
 - Follow through on commitments

@@ -254,11 +254,12 @@ function calculateScores(opp) {
   const stage_score = stageScores[opp.deal_stage] || 0;
 
   // 2. Account Score (0-20) - based on size and stability
+  // employees: 10,000+ = full 10 points. revenue is stored in $M: $2B+ = full 10 points.
   let account_score = 0;
   if (opp.employees && opp.revenue) {
     const sizeScore = Math.min(10, (opp.employees / 10000) * 10);
-    const revenueScore = Math.min(10, (opp.revenue / 5000) * 10);
-    account_score = (sizeScore + revenueScore) / 2;
+    const revenueScore = Math.min(10, (opp.revenue / 2000) * 10);
+    account_score = sizeScore + revenueScore;
   }
 
   // 3. Seller Score (0-20) - based on historical performance

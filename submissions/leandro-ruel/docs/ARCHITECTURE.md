@@ -242,9 +242,10 @@ stage_score = stageScores[deal_stage];
 
 ### Account Score Calculation:
 ```javascript
+// employees: 10,000+ = full 10 points. revenue is stored in $M: $2B+ = full 10 points.
 const sizeScore = Math.min(10, (employees / 10000) * 10);
-const revenueScore = Math.min(10, (revenue / 5000) * 10);
-account_score = (sizeScore + revenueScore) / 2;
+const revenueScore = Math.min(10, (revenue / 2000) * 10);
+account_score = sizeScore + revenueScore; // 0-20
 ```
 
 ### Seller Score Calculation:

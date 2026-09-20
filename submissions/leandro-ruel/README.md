@@ -32,7 +32,7 @@ Utilizei chatGPT para uma pesquisa rápida, pesquisei como funcionam algumas fer
 ### Resultados / Findings
 
 _O que você encontrou/construiu. Mostre dados, screenshots, links._
-chatgpt: https://chatgpt.com/share/6a2c5293-25b0-83e9-baa3-7c4d41d32262, chat que usei pra pesquisar rápido sobre metabase, pesquisei como são realizados dashboards de kpi e como se parecem para que pudesse fazer algo proximo e que atende o desafio: https://www.tableau.com/dashboard/sales-dashboard-examples-and-templates
+chatgpt: https://chatgpt.com/share/6a2c5293-25b0-83e9-baa3-7c4d41d32262, chat que usei pra pesquisar rápido sobre metabase, pesquisei como são realizados dashboards de kpi e como se parecem para que pudesse fazer algo proximo e que atende o desafio: https://www.tableau.com/dashboard/sales-dashboard-examples-and-templates. O processo completo de análise e construção da solução está exportado em [`process-log/`](./process-log/).
 
 
 
@@ -55,7 +55,7 @@ Gostaria de entender mais de KPIS (rs) mas como tenho pouca experiência com KPI
 
 ## Process Log — Como usei IA
 
-> Usei claude code haiku no chat do vscode + opencode. (ver logs)
+> Usei claude code haiku no chat do vscode + opencode. Logs completos em [`process-log/`](./process-log/).
 
 ### Ferramentas usadas
 
@@ -93,9 +93,9 @@ _Anexe ou linke as evidências do processo:_
 
 - [ ] Screenshots das conversas com IA
 - [ ] Screen recording do workflow
-- [x] Chat exports
-- [ ] Git history (se construiu código)
-- [ ] Outro: _____________
+- [x] Chat exports — [`process-log/first-chat.md`](./process-log/first-chat.md) (construção inicial com GitHub Copilot/Claude no VSCode) e [`process-log/session-ses_1437.md`](./process-log/session-ses_1437.md) (finalização com OpenCode)
+- [x] Git history (se construiu código) — commits no próprio PR, com progressão documentada
+- [x] Outro: Screenshots da aplicação (modal de detalhes) em `solution/sales-dashboard/e2e-screenshots/`
 
 ---
 
